@@ -104,11 +104,28 @@ function App() {
 
 
   
+  const userData = [
+    {
+      name: "Anil",
+      age: 34,
+      id: "1"
+    },
+    {
+      name: "hassan",
+      age: 31,
+      id: "2"
+    }
+  ];
+
   
   
   
   
-  
+
+
+
+
+
   
   
   
@@ -302,7 +319,56 @@ if display variable exist print heading else null */}
 
         <h2>Display Gender : {city}</h2>
 
+
+
+
+
+
+
       </div>
+
+        {/* Lec 23 */}
+       <h1>Lec 23</h1>
+
+        <h3>Static Table</h3>
+        <table border="1" align='center'>
+          <thead>
+            <tr>
+              <th>Name</th>   {/* Use <th> for headers */}
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hassan</td>
+              <td>20</td> 
+            </tr>
+            <tr>
+              <td>Ahmad</td>
+              <td>21</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Loop Map Function Table</h3>
+        <table border="1" align='center'>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              userData.map(user => (
+                <tr key={user.id}>
+                  <td>{user.name}</td>
+                  <td>{user.age}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
     </>
   );
 }
